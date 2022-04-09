@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 40px 100px;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .logo {
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.toggle {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background: url(https://i.ibb.co/HrfVRcx/menu.png);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: center;
+	cursor: pointer;
+}
+.toggle.active {
+	background: url(https://i.ibb.co/rt3HybH/close.png);
+	background-repeat: no-repeat;
+	background-size: 25px;
+	background-position: center;
+	cursor: pointer;
+}
+.showcase {
+	position: absolute;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: white;
+	transition: 0.5s;
+	z-index: 2;
+}
+.showcase.active {
+	right: 300px;
+}
+
+.showcase video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.8;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgb(241, 174, 250), rgb(243, 129, 172));
+	mix-blend-mode: overlay;
+}
+.text {
+	position: relative;
+	z-index: 10;
+}
+
+.text h2 {
+	font-size: 5em;
+	font-weight: 800;
+	color: #fff;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+.text h3 {
+	font-size: 4em;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+.text p {
+	font-size: 1.1em;
+	color: #fff;
+	margin: 20px 0;
+	font-weight: 400;
+	max-width: 700px;
+}
+.text a {
+	display: inline-block;
+	font-size: 1em;
+	background: #fff;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 500;
+	margin-top: 10px;
+	color: #111;
+	letter-spacing: 2px;
+	transition: 0.2s;
+}
+.text a:hover {
+	letter-spacing: 6px;
+}
+.menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu ul {
+	position: relative;
+}
+.menu ul li {
+	list-style: none;
+}
+.menu ul li a {
+	text-decoration: none;
+	font-size: 24px;
+	color: #111;
+}
+.menu ul li a:hover {
+	color: purple;
+}
+
+@media (max-width: 991px) {
+	.showcase,
+	.showcase header {
+		padding: 40px;
+	}
+	.text h2 {
+		font-size: 3em;
+	}
+	.text h3 {
+		font-size: 2em;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.root {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+}
+
+.game {
+	width: 90%;
+  background: url('./assets/images/sky.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inputWrapper {
+	padding: 5px;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	gap: 10px;
+	margin-top: 1rem;
+}
+
+.inputBox {
+	flex: 1;
+	width: 200px;
+	padding: 7px;
+}
+
+#btn {
+	flex: 1;
+	padding: 7px;
+	background-color: teal;
+	color: whitesmoke;
+	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+	border: none;
+	border-radius: 20px;
+}
+
+.not-game {
+	width: 40%;
+	height: 98%;
+	/* background-color: red; */
+	display: flex;
+	flex-direction: column;
+}
+
+.chat {
+	padding: 10px;
+	border: 1px solid black;
+	overflow: hidden;
+	flex: 4;
+}
+
+.chatbox{
+  position: absolute;
+  top: 200px;
+  left: 40%;
+  width: 600px;
+  background-color: aliceblue;
+  height: 400px;
+  position: relative;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar{
+  background-color: #E8E8E8;
+  height: 10%;
+  position: relative;
+}
+
+.dot{
+  font-size: 150px;
+}
+
+.red{
+  color: red;
+}
+
+.yellow{
+  color: yellow;
+}
+
+.green{
+  color: green;
+}
+
+.btns{
+  position: absolute;
+  left: 0;
+  top: -140px;
+  z-index: 10000;
+}
+
+.form{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 5;
+  left: 5px;
+  /* background: whitesmoke; */
+  width: 600px;
+  position: relative;
+  bottom: 0px;
+  left: -1px;
+}
+
+#btnGlobal{
+  padding: 8px;
+  border-radius: 40px;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  margin-left: 10px;
+}
+
+#chatGlobal{
+  width: 400px;
+  padding: 8px;
+}
+
+#username{
+  width: 200px;
+  padding: 8px;
+}
+
+
+
+.messages {
+	height: 600px;
+	padding: 10px;
+	background-color: rgb(224, 218, 218);
+  overflow-y: auto;
+}
+
+.chatMessage {
+	font-size: 18px;
+}
+
+.word {
+	position: absolute;
+	bottom: 20px;
+	left: 35%;
+	font-size: 20px;
+	width: 400px;
+	background-color: teal;
+	color: whitesmoke;
+	padding: 8px;
+	border-radius: 30px;
+}
+
+.cir {
+	margin: auto;
+	/* background: blue; */
+	border-radius: 50%;
+	opacity: 0.3;
+	width: 50px;
+	height: 50px;
+	/* Two lines below added */
+	display: grid;
+	place-items: center;
+}
+
+.ciclegraph {
+	justify-content: center;
+	display: flex;
+	position: relative;
+	left: 15%;
+	top: 70px;
+	width: 500px;
+	height: 500px;
+	margin: calc(100px / 2 + 0px);
+}
+
+.ciclegraph:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* border: 2px solid teal; */
+	width: calc(100% - 2px * 2);
+	height: calc(100% - 2px * 2);
+	border-radius: 50%;
+}
+
+.ciclegraph .circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 120px;
+	height: 120px;
+	margin: calc(-100px / 2);
+	background-size: 100px;
+	border-radius: 50%;
+	opacity: none;
+	transition: all 1s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 16px;
+	color: black;
+	text-align: center;
+	/* background: url('./avatar.png');
+  background-size: cover; */
+}
+
+.display__it {
+	opacity: 1;
+}
+
+.arrowed {
+	position: relative;
+	height: 200px;
+	width: 200px;
+	margin: 0 20px 20px 0;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+/* Just centering the examples */
+.arrowed div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.arrow-5 {
+	/* more triangle */
+	margin: auto;
+	position: relative;
+	height: 0px;
+	width: 0px;
+	border: 12px solid;
+	border-color: darkcyan darkcyan transparent transparent;
+	transform: rotate(45deg);
+	display: grid;
+	place-items: center;
+}
+
+.arrow-5:before {
+	margin: auto;
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: block;
+	height: 12px;
+	width: 16px;
+	background-color: darkcyan;
+	transform: rotate(-45deg) translate(2px, 1px);
+	display: grid;
+	place-items: center;
+}
+
+.progressbar {
+	width: 80%;
+	margin: 25px auto;
+	/* border: solid 1px #000; */
+	position: relative;
+}
+.progressbar .inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+	animation: progressbar-countdown;
+	/* Placeholder, this will be updated using javascript */
+	animation-duration: 40s;
+	/* We stop in the end */
+	animation-iteration-count: 1;
+	/* Stay on pause when the animation is finished finished */
+	animation-fill-mode: forwards;
+	/* We start paused, we start the animation using javascript */
+	animation-play-state: paused;
+	/* We want a linear animation, ease-out is standard */
+	animation-timing-function: linear;
+}
+@keyframes progressbar-countdown {
+	0% {
+		width: 100%;
+		background: #0f0;
+	}
+	100% {
+		width: 0%;
+		background: #f00;
+	}
+}
+
+#progressBar {
+	width: 100%;
+}
+
+.startBtn {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	padding: 10px;
+	background-color: teal;
+	font-size: 20px;
+	border-radius: 30px;
+	border: none;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.pass-btn {
+	position: absolute;
+	top: 10px;
+	left: 60%;
+	padding: 10px;
+	background-color: teal;
+	font-size: 20px;
+	border-radius: 30px;
+	border: none;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+@media (max-width: 1100px) {
+	.mask{
+		display: flex;
+	}
+
+	.root{
+		overflow: hidden;
+	}
+}

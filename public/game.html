@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Game</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="root">
+			<div class="mask">
+				<h1>Not supported for mobile devices</h1>
+			</div>
+			<button class="pass-btn">Pass</button>
+			<div class="game">
+				<div id="progressbar1"></div>
+				<!-- <progress value="0" max="20" id="progressBar"></progress> -->
+
+				<div class="ciclegraph">
+					<!-- <div class="arrow-5"></div> -->
+					<!-- <div class="cir"></div> -->
+					<div class="circle"></div>
+					<div class="circle"></div>
+					<div class="circle"></div>
+					<div class="circle"></div>
+					<div class="circle"></div>
+					<div class="circle"></div>
+				</div>
+				<div class="details">
+					<div id="countdown"></div>
+				</div>
+			</div>
+			<div class="not-game">
+				<div class="chat">
+					<div class="messages"></div>
+					<form id="messageForm">
+						<div class="chatInputWrapper">
+							<input
+								required
+								type="text"
+								name="chat"
+								placeholder="chat"
+								id="chat"
+								class="inputBox"
+							/>
+							<input type="submit" value="submit" id="btn" />
+						</div>
+					</form>
+					<br />
+				</div>
+				<form id="answerForm">
+					<div class="inputWrapper">
+						<input
+							required
+							type="text"
+							name="answer"
+							id="answer"
+							placeholder="Enter you guess"
+							class="inputBox"
+						/>
+						<input type="submit" value="submit" id="btn" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+			integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="./scripts/main.js"></script>
+	</body>
+</html>
